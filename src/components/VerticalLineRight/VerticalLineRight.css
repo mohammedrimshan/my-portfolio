@@ -1,0 +1,38 @@
+#lineR {
+  width: 1px;
+  height: 27%;
+  background-color: rgba(128, 128, 128, 0.436);
+  position: fixed;
+  right: 40px;
+  z-index: 100000;
+  font-family: "Poppins";
+  bottom: 100px;
+}
+
+#lineR .line-links {
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  color: rgba(128, 128, 128, 0.556);
+  font-size: 12px;
+  position: fixed;
+  right: 28px;
+  bottom: 40%;
+  font-size: 20px;
+  z-index: 100000;
+}
+
+#lineR .line-links a {
+  color: rgba(128, 128, 128, 0.556);
+  margin-bottom: 15px;
+  transition-duration: 0.3s;
+}
+#lineR .line-links a:hover {
+  transform: scale(1.1);
+  color: #00abf0;
+}
+
+@media only screen and (max-width: 1024px) {
+  #lineR {
+    display: none;
+  }
+}

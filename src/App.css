@@ -1,0 +1,14 @@
+body,
+html {
+  padding: 0;
+  overflow-x: hidden;
+  margin: 0;
+}
+.App .loader {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-image: linear-gradient(315deg, #0d1b3d 0%, #031122 74%);
+  width: 100%;
+  height: 100vh;
+}

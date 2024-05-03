@@ -1,0 +1,25 @@
+#lineL {
+  width: 1px;
+  height: 40%;
+  background-color: rgba(128, 128, 128, 0.436);
+  position: fixed;
+  left: 40px;
+  z-index: 200;
+  font-family: "Poppins";
+}
+
+#lineL a {
+  text-decoration: none;
+  transform: rotate(180);
+  writing-mode: vertical-lr;
+  color: rgba(128, 128, 128, 0.556);
+  font-size: 12px;
+  position: fixed;
+  left: 32px;
+  top: 42%;
+}
+@media only screen and (max-width: 1024px) {
+  #lineL {
+    display: none;
+  }
+}
