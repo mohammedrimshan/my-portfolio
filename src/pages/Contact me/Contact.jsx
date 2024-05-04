@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
 import "./Contact.css";
 import { toast } from "react-hot-toast";
-import emailjs from "@emailjs/browser";
-import { FaGithub, FaLinkedin, FaInstagram, FaPhone } from "react-icons/fa";
+import emailjs from "emailjs-com"; // Change the import statement
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa"; // Import FaEnvelope
+
 import { socialmedia } from "../../constants";
 
 const Contact = () => {
@@ -26,8 +27,8 @@ const Contact = () => {
       // Send email
       emailjs
         .send(
-          "service_gh178wc",
-          "template_s09tamk",
+          "YOUR_SERVICE_ID", // Change to your EmailJS service ID
+          "YOUR_TEMPLATE_ID", // Change to your EmailJS template ID
           {
             from_name: formData.name,
             to_name: "Rimshan", // Change this to "Rimshan" or remove if unnecessary
@@ -36,20 +37,10 @@ const Contact = () => {
             msg: formData.msg,
             email: formData.email,
           },
-          "3VJjJlQ-x0WtTXpqs"
+          "YOUR_USER_ID" // Change to your EmailJS user ID
         )
         .then(result => {
-          toast.success("Look at my styles.", {
-            style: {
-              border: "1px solid #713200",
-              padding: "16px",
-              color: "#713200",
-            },
-            iconTheme: {
-              primary: "#713200",
-              secondary: "#FFFAEE",
-            },
-          });
+          toast.success("Email sent successfully."); // Change success message if necessary
           setFormData({
             name: "",
             email: "",
@@ -92,7 +83,7 @@ const Contact = () => {
           <h1>Get in touch</h1>
           <p>
             Thank you for visiting my website! I would love to hear from you and
-            answer any questions you may have. Whether you're interested in may
+            answer any questions you may have. Whether you're interested in my
             services, have a project you'd like to discuss, or just want to say
             hello, please feel free to reach out to us using the contact form.
           </p>
