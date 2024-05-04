@@ -17,7 +17,7 @@ const Contact = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-
+    console.log("Form data:", formData); 
     // Check if all required fields are filled and email is valid
     const isValidEmail = (email) => {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -40,7 +40,7 @@ const Contact = () => {
           "YOUR_USER_ID" // Change to your EmailJS user ID
         )
         .then(result => {
-          toast.success("Email sent successfully."); // Change success message if necessary
+          toast.success("Email sent successfully.",result); // Change success message if necessary
           setFormData({
             name: "",
             email: "",
