@@ -18,6 +18,8 @@ import threejs from "./tech/threejs.svg"
 import EcoWheelX from "./projects/eco.png"
 import Collage from "./projects/col.png"
 import Summarise from "./projects/sum.png"
+import Spotify from "./projects/spotify.jpg"
+import Amazon from "./projects/Amazon.jpg"
 
 
 export {
@@ -39,5 +41,6 @@ export {
   EcoWheelX,
   Collage,
   Summarise,
-
+  Spotify,
+  Amazon,
 }

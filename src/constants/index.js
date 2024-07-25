@@ -18,6 +18,9 @@ import {
   EcoWheelX,
   Collage,
   Summarise,
+  Spotify,
+  Amazon,
+  
 } from "../image/index.js"
 
 const technologies = [
@@ -140,6 +143,26 @@ const projects = [
     github: "#notfound",
     stacks: ["PYTHON", "HTML", "CSS"],
   },
+  {
+    name: "Amazon Clone",
+    description:
+      "Made Exact Amazon Clone HTML And CSS",
+    image: Amazon,
+    link: "https://mohammedrimshan.github.io/Amazon-Clone-using-HTML-and-CSS/",
+    github: "https://github.com/mohammedrimshan/Amazon-Clone-using-HTML-and-CSS",
+    stacks: [ "HTML", "CSS"],
+  },
+ 
+  {
+    name: "SPOTIFY CLONE",
+    description:
+      "Made Spotify Clone Using with HTML And CSS",
+    image: Spotify,
+    link: "https://mohammedrimshan.github.io/Spotify-Clone-using-HTML-and-CSS/",
+    github: "https://github.com/mohammedrimshan/Spotify-Clone-using-HTML-and-CSS",
+    stacks: ["HTML", "CSS"],
+  },
+ 
  
 ]
 
