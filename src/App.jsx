@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./App.css"
-
+import { ToastProvider } from "./components/Toast/Toast"; 
 import { Vanta, Portfolio, Experience, Contact, Skills, About } from "./pages"
 import {
   Navbar,
@@ -28,6 +28,7 @@ export const App = () => {
         </div>
       ) : (
         <div className="margin">
+          <ToastProvider />
           <Navbar />
           <VerticalLineLeft />
           <VerticalLineRight />
