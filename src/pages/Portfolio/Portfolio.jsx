@@ -1,24 +1,22 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./portfolio.css"
 import Card from "./Cards/card"
-import { useEffect } from "react"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import { projects } from "../../constants"
 
 const Portfolio = () => {
-  const [state, setState] = useState(false)
-
-  const handle = () => {
-    setState(!state)
-  }
+  const [showMore, setShowMore] = useState(false)
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true })
   }, [])
+
+  const visibleProjects = showMore ? projects : projects.slice(0, 3)
+
   return (
     <div id="portfolio">
-      <div class="title" data-aos="flip-up" data-aos-duration="2000">
+      <div className="title" data-aos="flip-up" data-aos-duration="2000">
         <h1>
           Portfol
           <span
@@ -34,7 +32,7 @@ const Portfolio = () => {
       </div>
 
       <div className="card-row">
-        {projects.map(project => (
+        {visibleProjects.map(project => (
           <Card
             key={project.id}
             name={project.name}
@@ -49,7 +47,9 @@ const Portfolio = () => {
 
       <div className="show">
         <div className="btn">
-          <button onClick={() => handle(!state)}>Show more</button>
+          <button onClick={() => setShowMore(!showMore)}>
+            {showMore ? "Show less" : "Show more"}
+          </button>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ import Collage from "./projects/col.png"
 import Summarise from "./projects/sum.png"
 import Spotify from "./projects/spotify.jpg"
 import Amazon from "./projects/Amazon.jpg"
-
+import Brototype from './experience/brototype.jpg'
 
 export {
   iedc,
@@ -43,4 +43,5 @@ export {
   Summarise,
   Spotify,
   Amazon,
+  Brototype
 }

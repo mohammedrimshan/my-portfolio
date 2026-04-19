@@ -29,9 +29,10 @@ export const Banner = () => {
                 {" "}
                 <Typewriter
                   words={[
+                    "MERN Stack Developer",
+                    "FullStack Developer",
                     "FrontEnd Developer",
                     "React JS Developer",
-                    "Video Editor",
                   ]}
                   loop={Infinity}
                   cursor
@@ -43,7 +44,7 @@ export const Banner = () => {
               </span>
             </h3>
             <a
-              href="https://drive.google.com/file/d/1zaihTdZvWRFsHhP594Tm_Q9_Ra8H0ZJU/view?usp=drive_link"
+              href="https://drive.google.com/file/d/19THZ_M-G0_MBzlBT4nSqg7YCJQezee6E/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

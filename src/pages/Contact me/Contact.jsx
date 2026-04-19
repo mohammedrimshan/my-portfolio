@@ -32,40 +32,37 @@ const Contact = () => {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
 
-    // Validation checks with specific warning messages
-    if (!formData.name) {
-      warning('Please enter your name.');
-      return;
+    if (formData.name && formData.msg && formData.email && isValidEmail(formData.email)) {
+      // Send email
+      emailjs
+        .send(
+          "YOUR_SERVICE_ID", // Change to your EmailJS service ID
+          "YOUR_TEMPLATE_ID", // Change to your EmailJS template ID
+          {
+            from_name: formData.name,
+            to_name: "Rimshan", // Change this to "Rimshan" or remove if unnecessary
+            from_email: formData.email,
+            to_email: "rimshanshanu55@gmail.com", // Change this to your email or remove if unnecessary
+            msg: formData.msg,
+            email: formData.email,
+          },
+          "YOUR_USER_ID" // Change to your EmailJS user ID
+        )
+        .then(result => {
+          toast.success("Email sent successfully.",result); // Change success message if necessary
+          setFormData({
+            name: "",
+            email: "",
+            msg: "",
+          });
+        })
+        .catch(error => {
+          console.error("Email sending error:", error);
+          toast.error("An error occurred while sending the email. Please try again later.");
+        });
+    } else {
+      toast.error("Please fill out all required fields with valid data.");
     }
-    if (!formData.email) {
-      warning('Please enter your email.');
-      return;
-    }
-    if (!isValidEmail(formData.email)) {
-      warning('Please enter a valid email address.');
-      return;
-    }
-    if (!formData.message) {
-      warning('Please enter a message.');
-      return;
-    }
-
-    // If all validations pass, send the email
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_xd7ti39',
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_gw1zo2l',
-        formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'loNUkj4bjNRG6RoD1'
-      )
-      .then((result) => {
-        success('Email sent successfully.');
-        setFormData({ name: '', email: '', message: '' });
-      })
-      .catch((err) => {
-        console.error('Email sending error:', err, err.text, err.status);
-        error(`Failed to send email: ${err.text || 'Please try again later.'}`);
-      });
   };
 
   const handleInputChange = (event) => {

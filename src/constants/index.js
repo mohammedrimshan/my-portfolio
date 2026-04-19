@@ -20,7 +20,7 @@ import {
   Summarise,
   Spotify,
   Amazon,
-  
+  Brototype
 } from "../image/index.js"
 
 const technologies = [
@@ -80,15 +80,19 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Freelancer",
-    company_name: "Web Developer",
-    icon: cec,
+    title: "MERNSTACK DEVELOPER",
+    company_name: "Brototype",
+    icon: Brototype,
     iconBg: "#ffffff",
-    date: "September 2021 - Present",
+    date: "July 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participated in an intensive MERN stack development program with a strong focus on real-world, backend-heavy projects.",
+      "Developed and maintained full-stack web applications using React.js, Node.js, Express.js, and MongoDB.",
+      "Collaborated with peers and mentors in agile environments to build scalable and high-performance applications.",
+      "Designed and implemented RESTful APIs and integrated third-party services such as Stripe, Razorpay, Firebase, and OpenAI APIs.",
+      "Applied Clean Architecture and SOLID principles to build maintainable and modular codebases.",
+      "Gained hands-on experience with tools like WebRTC and Socket.IO for real-time and AI-powered features.",
+      "Built and showcased multiple projects, including SaaS platforms, AI-powered tools, and real-time communication systems."
     ],
   },
   {
@@ -117,6 +121,24 @@ const socialmedia = [
 ]
 
 const projects = [
+  {
+    name: "EcoWheelX",
+    description:
+      " A Blockchain and Machine Learning based System to Facilitate Scrapping of Cars Web Application For RTO,Police,ScrapDealer and Admin Android Application For Users,Certificate And User Request Through BlockChain Technology. ",
+    image: EcoWheelX,
+    link: "#notfound",
+    github: "#notfound",
+    stacks: ["Django", "Dart","HTML&CSS",],
+  },
+  {
+    name: "EcoWheelX",
+    description:
+      " A Blockchain and Machine Learning based System to Facilitate Scrapping of Cars Web Application For RTO,Police,ScrapDealer and Admin Android Application For Users,Certificate And User Request Through BlockChain Technology. ",
+    image: EcoWheelX,
+    link: "#notfound",
+    github: "#notfound",
+    stacks: ["Django", "Dart","HTML&CSS",],
+  },
   {
     name: "EcoWheelX",
     description:
