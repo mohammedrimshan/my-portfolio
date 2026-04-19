@@ -29,10 +29,12 @@ export const Banner = () => {
                 {" "}
                 <Typewriter
                   words={[
-                    "MERN Stack Developer",
-                    "FullStack Developer",
-                    "FrontEnd Developer",
-                    "React JS Developer",
+                    "MERN Stack Engineer",
+                    "Full Stack Developer",
+                    "React.js Specialist",
+                    "Node.js Expert",
+                    "Backend Developer",
+                    "Technical Mentor"
                   ]}
                   loop={Infinity}
                   cursor
@@ -44,7 +46,7 @@ export const Banner = () => {
               </span>
             </h3>
             <a
-              href="https://drive.google.com/file/d/19THZ_M-G0_MBzlBT4nSqg7YCJQezee6E/view?usp=sharing"
+              href="https://drive.google.com/file/d/1_Tx1xTNCPr2ZAQ5pTAghVspJT9-jrZuL/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

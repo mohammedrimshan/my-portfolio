@@ -30,21 +30,11 @@ function About() {
             </span>
           </h1>
           <p data-aos="fade-left">
-            Hi there! My name is Mohammed Rimshan and I'm a front-end web developer
-            with expertise in HTML, CSS, JavaScript, and React.js. Over the
-            years, I've built a number of websites and web applications, and I'm
-            always looking for new challenges to tackle. <br />
+            I am a results-driven **MERN Stack Developer** with a passion for building scalable, high-impact web applications. With a solid foundation in **React.js, Node.js, Express, and MongoDB**, I specialize in architecting clean, maintainable codebases and implementing complex features like real-time communication and AI integration. <br />
             <br />
-            Recently, I've been expanding my skillset to include Python for data
-            science and artificial intelligence. I'm fascinated by the potential
-            of AI to transform industries and improve people's lives, and I'm
-            excited to be part of this rapidly evolving field. In my free time,
-            I enjoy tinkering with new technologies and exploring the latest
-            trends in web development and AI. <br />
+            My professional journey includes mentoring 50+ junior developers and overseeing code quality for enterprise-grade projects. I thrive in agile environments where I can leverage my expertise in **TypeScript, WebRTC, and Socket.io** to solve real-world problems. <br />
             <br />
-            If you have a project or idea that you'd like to collaborate on,
-            please don't hesitate to get in touch! I'm always up for a new
-            challenge and would love to hear from you.
+            Driven by curiosity and a commitment to excellence, I am always exploring emerging technologies—from **AI-powered tools** to **cloud-native architectures**—to deliver seamless user experiences and robust backend solutions.
           </p>
           <div className="tab-title">
             <h5
@@ -69,19 +59,14 @@ function About() {
   <div className="scroll-container">
     <ul className="scroll-list">
       <li>
-        <span>BCA-BACHELOR OF COMPUTER APPLICATION</span>
+        <span>BCA - BACHELOR OF COMPUTER APPLICATION</span>
         <br />
-        UNIVERSITY OF CALICUT, 2021-24
+        University of Calicut, 2021-2024 (GPA: 7.1/10)
       </li>
       <li>
-        <span>HSS</span>
+        <span>Higher Secondary Education</span>
         <br />
-        MSP HSS MALAPPURAM
-      </li>
-      <li>
-        <span></span>
-        <br />
-     
+        MSP HSS Malappuram
       </li>
     </ul>
   </div>

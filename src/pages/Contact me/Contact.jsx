@@ -19,50 +19,67 @@ const Contact = () => {
     message: '',
   });
 
+  const [errors, setErrors] = React.useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const validateField = (name, value) => {
+    let errorMessage = '';
+    
+    switch (name) {
+      case 'name':
+        if (!value.trim()) errorMessage = 'Name is required.';
+        else if (value.trim().length < 2) errorMessage = 'Name must be at least 2 characters.';
+        break;
+      case 'email':
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!value.trim()) errorMessage = 'Email is required.';
+        else if (!emailRegex.test(value)) errorMessage = 'Please enter a valid email address.';
+        break;
+      case 'message':
+        if (!value.trim()) errorMessage = 'Message is required.';
+        else if (value.trim().length < 10) errorMessage = 'Message must be at least 10 characters.';
+        break;
+      default:
+        break;
+    }
+    
+    setErrors(prev => ({ ...prev, [name]: errorMessage }));
+    return errorMessage;
+  };
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log('Form data:', formData);
-    console.log('EmailJS Config:', {
-      serviceID: import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_xd7ti39',
-      templateID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_gw1zo2l',
-      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'loNUkj4bjNRG6RoD1',
-    });
+    
+    // Final validation check before submission
+    const nameErr = validateField('name', formData.name);
+    const emailErr = validateField('email', formData.email);
+    const messageErr = validateField('message', formData.message);
 
-    const isValidEmail = (email) => {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    };
-
-    if (formData.name && formData.msg && formData.email && isValidEmail(formData.email)) {
-      // Send email
-      emailjs
-        .send(
-          "YOUR_SERVICE_ID", // Change to your EmailJS service ID
-          "YOUR_TEMPLATE_ID", // Change to your EmailJS template ID
-          {
-            from_name: formData.name,
-            to_name: "Rimshan", // Change this to "Rimshan" or remove if unnecessary
-            from_email: formData.email,
-            to_email: "rimshanshanu55@gmail.com", // Change this to your email or remove if unnecessary
-            msg: formData.msg,
-            email: formData.email,
-          },
-          "YOUR_USER_ID" // Change to your EmailJS user ID
-        )
-        .then(result => {
-          toast.success("Email sent successfully.",result); // Change success message if necessary
-          setFormData({
-            name: "",
-            email: "",
-            msg: "",
-          });
-        })
-        .catch(error => {
-          console.error("Email sending error:", error);
-          toast.error("An error occurred while sending the email. Please try again later.");
-        });
-    } else {
-      toast.error("Please fill out all required fields with valid data.");
+    if (nameErr || emailErr || messageErr) {
+      warning('Please fix the errors in the form.');
+      return;
     }
+
+    // If all validations pass, send the email
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_xd7ti39',
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_gw1zo2l',
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'loNUkj4bjNRG6RoD1'
+      )
+      .then((result) => {
+        success('Email sent successfully.');
+        setFormData({ name: '', email: '', message: '' });
+        setErrors({ name: '', email: '', message: '' });
+      })
+      .catch((err) => {
+        console.error('Email sending error:', err, err.text, err.status);
+        error(`Failed to send email: ${err.text || 'Please try again later.'}`);
+      });
   };
 
   const handleInputChange = (event) => {
@@ -71,6 +88,7 @@ const Contact = () => {
       ...formData,
       [id]: value,
     });
+    validateField(id, value);
   };
 
   return (
@@ -113,30 +131,48 @@ const Contact = () => {
         </div>
         <div className="col-2">
           <form ref={formRef} onSubmit={handleFormSubmit}>
-            <input
-              type="text"
-              placeholder="Your name"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleInputChange}
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-            />
-            <textarea
-              rows="4"
-              placeholder="Message"
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleInputChange}
-            />
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Your name"
+                id="name"
+                name="name"
+                className={errors.name ? 'invalid' : ''}
+                value={formData.name}
+                onChange={handleInputChange}
+                onBlur={(e) => validateField('name', e.target.value)}
+              />
+              {errors.name && <span className="error-text">{errors.name}</span>}
+            </div>
+            
+            <div className="form-group">
+              <input
+                type="email"
+                placeholder="Email"
+                id="email"
+                name="email"
+                className={errors.email ? 'invalid' : ''}
+                value={formData.email}
+                onChange={handleInputChange}
+                onBlur={(e) => validateField('email', e.target.value)}
+              />
+              {errors.email && <span className="error-text">{errors.email}</span>}
+            </div>
+
+            <div className="form-group">
+              <textarea
+                rows="4"
+                placeholder="Message"
+                id="message"
+                name="message"
+                className={errors.message ? 'invalid' : ''}
+                value={formData.message}
+                onChange={handleInputChange}
+                onBlur={(e) => validateField('message', e.target.value)}
+              />
+              {errors.message && <span className="error-text">{errors.message}</span>}
+            </div>
+
             <button type="submit" className="btn">
               Submit
             </button>

@@ -21,7 +21,11 @@ import Summarise from "./projects/sum.png"
 import Spotify from "./projects/spotify.jpg"
 import Amazon from "./projects/Amazon.jpg"
 import Brototype from './experience/brototype.jpg'
-
+import Strivex from './projects/Strivex.png'
+import Edusphere from './projects/Edusphere.png'
+import Quicklink from './projects/quicklink.jpg'
+import Aigen from './projects/Aigen.jpg'
+import Usermgmt from './projects/Usermgmt.jpg'
 export {
   iedc,
   cec,
@@ -43,5 +47,10 @@ export {
   Summarise,
   Spotify,
   Amazon,
-  Brototype
+  Brototype,
+  Strivex,
+  Edusphere,
+  Quicklink,
+  Aigen,
+  Usermgmt
 }

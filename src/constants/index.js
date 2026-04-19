@@ -1,4 +1,3 @@
-
 import {
   iedc,
   cec,
@@ -20,8 +19,13 @@ import {
   Summarise,
   Spotify,
   Amazon,
-  Brototype
-} from "../image/index.js"
+  Brototype,
+  Strivex,
+  Edusphere,
+  Quicklink,
+  Aigen,
+  Usermgmt
+} from "../image/index.js";
 
 const technologies = [
   {
@@ -45,6 +49,18 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "Express JS",
+    icon: nodejs, // Reuse nodejs icon for express
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
     name: "Redux Toolkit",
     icon: redux,
   },
@@ -53,46 +69,48 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Socket.io",
+    icon: javascript, // Placeholder or existing
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
+    name: "WebRTC",
+    icon: javascript, // Placeholder or existing
   },
   {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
     name: "docker",
     icon: docker,
   },
-]
+];
 
 const experiences = [
   {
-    title: "MERNSTACK DEVELOPER",
-    company_name: "Brototype",
+    title: "QA Associate & MERN Stack Developer",
+    company_name: "Packapeer Academy (Brototype)",
     icon: Brototype,
     iconBg: "#ffffff",
-    date: "July 2024 - Present",
+    date: "Nov 2025 – April 2026",
     points: [
-      "Participated in an intensive MERN stack development program with a strong focus on real-world, backend-heavy projects.",
-      "Developed and maintained full-stack web applications using React.js, Node.js, Express.js, and MongoDB.",
-      "Collaborated with peers and mentors in agile environments to build scalable and high-performance applications.",
-      "Designed and implemented RESTful APIs and integrated third-party services such as Stripe, Razorpay, Firebase, and OpenAI APIs.",
-      "Applied Clean Architecture and SOLID principles to build maintainable and modular codebases.",
-      "Gained hands-on experience with tools like WebRTC and Socket.IO for real-time and AI-powered features.",
-      "Built and showcased multiple projects, including SaaS platforms, AI-powered tools, and real-time communication systems."
+      "Mentored and reviewed the work of over 50+ junior developers, ensuring code quality and adherence to best practices.",
+      "Conducted daily technical stand-ups and code reviews, identifying performance bottlenecks and architectural improvements.",
+      "Optimized internal platform workflows, reducing deployment time and improving developer productivity.",
+      "Collaborated on full-stack features using the MERN stack, focusing on scalability and clean architecture.",
+    ],
+  },
+  {
+    title: "MERN Stack Developer (Trainee)",
+    company_name: "Packapeer Academy (Brototype)",
+    icon: Brototype,
+    iconBg: "#ffffff",
+    date: "July 2024 – September 2025",
+    points: [
+      "Completed an intensive professional development program focused on industry-standard MERN stack development.",
+      "Built and deployed high-performance full-stack applications with complex features like real-time communication and AI integration.",
+      "Mastered Clean Architecture and SOLID principles to write maintainable, modular, and testable code.",
+      "Implemented secure authentication systems (JWT, OAuth) and integrated payment gateways (Stripe, Razorpay).",
     ],
   },
   {
@@ -100,93 +118,73 @@ const experiences = [
     company_name: "ICT Academy of Kerala",
     iconBg: "#ffffff",
     icon: iedc,
-    date: "Oct 2023 ",
+    date: "Oct 2023",
     points: [
-      "Learned About Supervised And Unsupervised Machine Learning ",
-      "Trained A Data Set Through Linear Regression Algorithm.",
-      "Trained A Data Set Through KNN Algorithm",
+      "Gained hands-on experience with Supervised and Unsupervised Learning algorithms.",
+      "Implemented predictive models using Linear Regression, KNN, and Decision Trees on real-world datasets.",
+      "Explored data preprocessing techniques and feature engineering to improve model accuracy.",
     ],
   },
-]
+];
+
 const socialmedia = [
   {
     github: "https://github.com/mohammedrimshan",
     linkedin: "https://www.linkedin.com/in/mohammed-rimshan-02986a225/",
-    // twitter: "https://x.com/s_an_in?s=21&t=jY9EqensyLU26TAYgxMFPg",
     instagram: "https://www.instagram.com/_rim__sha_n_/",
     gmail: "mailto:rimshanshanu55@gmail.com",
     phone: "tel:+918606760567",
     leetcode: "https://leetcode.com/MOHAMMED_RIMSHAN/",
   },
-]
+];
 
 const projects = [
   {
-    name: "EcoWheelX",
+    name: "StriveX (SaaS Fitness Platform)",
     description:
-      " A Blockchain and Machine Learning based System to Facilitate Scrapping of Cars Web Application For RTO,Police,ScrapDealer and Admin Android Application For Users,Certificate And User Request Through BlockChain Technology. ",
-    image: EcoWheelX,
-    link: "#notfound",
-    github: "#notfound",
-    stacks: ["Django", "Dart","HTML&CSS",],
+      "A sophisticated wellness platform featuring real-time video consultations via WebRTC, live chat using Socket.io, and AI-driven workout orchestration. Built with clean architecture in TypeScript for high maintainability.",
+    image: Strivex,
+    link: "#",
+    github: "https://github.com/mohammedrimshan/StriveX---SaaS-Based-AI-Fitness-App",
+    stacks: ["TypeScript", "React", "Node.js", "MongoDB", "WebRTC", "Socket.io"],
   },
   {
-    name: "EcoWheelX",
+    name: "EduSphere (AI E-Learning)",
     description:
-      " A Blockchain and Machine Learning based System to Facilitate Scrapping of Cars Web Application For RTO,Police,ScrapDealer and Admin Android Application For Users,Certificate And User Request Through BlockChain Technology. ",
-    image: EcoWheelX,
-    link: "#notfound",
-    github: "#notfound",
-    stacks: ["Django", "Dart","HTML&CSS",],
+      "An enterprise-level learning management system with role-based access control and AI-integrated content delivery. Features real-time student-tutor engagement and automated academic progress tracking.",
+    image: Edusphere,
+    link: "#",
+    github: "https://github.com/mohammedrimshan/EduSphere-BackEnd",
+    stacks: ["React", "Node.js", "Express", "MongoDB", "Redux", "Tailwind CSS"],
   },
   {
-    name: "EcoWheelX",
+    name: "AI Image Generator",
     description:
-      " A Blockchain and Machine Learning based System to Facilitate Scrapping of Cars Web Application For RTO,Police,ScrapDealer and Admin Android Application For Users,Certificate And User Request Through BlockChain Technology. ",
-    image: EcoWheelX,
-    link: "#notfound",
-    github: "#notfound",
-    stacks: ["Django", "Dart","HTML&CSS",],
+      "A creative tool utilizing OpenAI's DALL-E API to generate high-quality images from text prompts. Includes a community showcase feature and secure cloud storage integration.",
+    image: Aigen,
+    link: "#",
+    github: "https://github.com/mohammedrimshan/Ai-Image-Generator-MERN-FrontEnd",
+    stacks: ["React", "Node.js", "OpenAI API", "Cloudinary", "Tailwind CSS"],
   },
   {
-    name: "Collage Web",
+    name: "URL Shortener & QR Generator",
     description:
-      "made a Website For Outside Peoples to know About Our collage.And also to Enquiry With collage management and Post their feedback",
-    image: Collage,
-    github: "#notfound",
-    stacks: ["HTML", "CSS","PYTHON"],
+      "A high-performance utility for shortening URLs with integrated QR code generation and click analytics. Optimized for speed and minimal redirect latency.",
+    image: Quicklink,
+    link: "#",
+    github: "https://github.com/mohammedrimshan/QuickLink",
+    stacks: ["React", "Node.js", "Express", "MongoDB", "QR API"],
   },
   {
-    name: "SUMMARIZER",
+    name: "User Management System",
     description:
-      "Made a Website For summarize Long paragraph to short with the help of Summarize Packages And HTML And CSS",
-    image: Summarise,
-    link: "#notfound",
-    github: "#notfound",
-    stacks: ["PYTHON", "HTML", "CSS"],
+      "A robust administrative dashboard for managing user identities, roles, and permissions. Built with secure JWT authentication and search-optimized user listings.",
+    image: Usermgmt,
+    link: "#",
+    github: "https://github.com/mohammedrimshan/USER-MANAGEMENT-TYPESCRIPT",
+    stacks: ["React", "Node.js", "Express", "MongoDB", "Bootstrap"],
   },
-  {
-    name: "Amazon Clone",
-    description:
-      "Made Exact Amazon Clone HTML And CSS",
-    image: Amazon,
-    link: "https://mohammedrimshan.github.io/Amazon-Clone-using-HTML-and-CSS/",
-    github: "https://github.com/mohammedrimshan/Amazon-Clone-using-HTML-and-CSS",
-    stacks: [ "HTML", "CSS"],
-  },
- 
-  {
-    name: "SPOTIFY CLONE",
-    description:
-      "Made Spotify Clone Using with HTML And CSS",
-    image: Spotify,
-    link: "https://mohammedrimshan.github.io/Spotify-Clone-using-HTML-and-CSS/",
-    github: "https://github.com/mohammedrimshan/Spotify-Clone-using-HTML-and-CSS",
-    stacks: ["HTML", "CSS"],
-  },
- 
- 
-]
+];
 
 const reviews = [
   {
@@ -210,5 +208,5 @@ const reviews = [
     position: "Web Developer",
     text: "Rimshan's enthusiasm is not only inspiring but also instrumental in driving our team forward. I'm confident that his dedication and love for web development make him a valuable asset to any team.",
   },
-]
-export { experiences, technologies, socialmedia, projects, reviews }
+];
+export { experiences, technologies, socialmedia, projects, reviews };

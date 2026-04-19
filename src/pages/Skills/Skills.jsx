@@ -28,27 +28,35 @@ const Skills = () => {
       </div>
       <div className="details">
         <Card
-          img={FaDatabase}
-          title="Backend Developer"
-          stacks={["MYSQL", "Django"]}
+          img={RiCodeSSlashLine}
+          title="Full Stack Development"
+          stacks={["MERN Stack", "TypeScript"]}
         />
         <Card
-          img={RiCodeSSlashLine}
-          title="Frontend Developer"
-          stacks={["REACT.JS", ]}
+          img={FaDatabase}
+          title="Backend Engineering"
+          stacks={["Node.js", "Express", "MongoDB"]}
         />
         <Card
           img={CiCloudOn}
-          title="Cloud Backend"
-          stacks={["MYSQL", "Django"]}
+          title="Real-time & AI"
+          stacks={["Socket.io", "WebRTC", "OpenAI"]}
         />
         <Card
-          img={ImAndroid}
-          title="Mobile App Developer"
-          stacks={["Dart"]}
+          img={MdLaptopMac}
+          title="Frontend Mastery"
+          stacks={["React.js", "Redux", "Tailwind"]}
         />
-        <Card img={GiBrain} title="Problem Solving" stacks={["Python", "C"]} />
-        <Card img={MdLaptopMac} title="UI/UX" stacks={["HTML","CSS","JavaScript"]} />
+        <Card 
+          img={GiBrain} 
+          title="DevOps & Tools" 
+          stacks={["Git", "Docker", "AWS"]} 
+        />
+        <Card 
+          img={ImAndroid} 
+          title="Problem Solving" 
+          stacks={["Clean Architecture", "SOLID"]} 
+        />
       </div>
       <Reviews />
     </div>

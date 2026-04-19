@@ -12,7 +12,7 @@ const Portfolio = () => {
     AOS.init({ duration: 1000, once: true })
   }, [])
 
-  const visibleProjects = showMore ? projects : projects.slice(0, 3)
+  const visibleProjects = showMore ? projects : projects.slice(0, 4)
 
   return (
     <div id="portfolio">

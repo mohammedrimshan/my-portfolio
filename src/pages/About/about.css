@@ -14,7 +14,7 @@
   justify-content: center;
 }
 #about .col-1 .img {
-  background-image: url(../../image/banner-color.jpeg);
+  background-image: url("https://res.cloudinary.com/strivex/image/upload/v1753511373/1710399443404_2_anfj6n.avif");
   filter: grayscale(100%);
   width: 400px;
   height: 550px;
@@ -23,6 +23,7 @@
   margin-top: 150px;
   border-radius: 50px;
 }
+
 
 #about .col-2 {
   width: 60%;

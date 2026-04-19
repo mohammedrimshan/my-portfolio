@@ -98,16 +98,18 @@
 }
 
 #Banner .col-2 .img {
-  background-image: url(../../image/banner-color.jpeg);
+  background-image: url("https://res.cloudinary.com/strivex/image/upload/v1776576761/portf_rapwh1.jpg");
   filter: grayscale(100%);
   background-size: cover;
   width: 350px;
   height: 350px;
   box-shadow: 0px 0px 10px rgba(33, 150, 243, 0.25),
-    0px 0px 40px rgba(33, 150, 243, 0.25), 0px 0px 80px rgba(33, 150, 243, 0.25);
+              0px 0px 40px rgba(33, 150, 243, 0.25),
+              0px 0px 80px rgba(33, 150, 243, 0.25);
   transition-duration: 1s;
   animation: profile_animate 8s ease-in-out infinite 0s;
 }
+
 
 #Banner .col-2 .img:hover {
   filter: grayscale(0%);
